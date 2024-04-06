@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/", (req, res) => {
+// app.post("/", (req, res) => {
 //   var Name = req.body.Name;
 //   var EmpId = req.body.empID;
 //   var Location = req.body.location;
@@ -165,8 +165,8 @@ app.post("/", (req, res) => {
 //       console.log(response.body);
 //     }
 //   });
-  res.sendFile(__dirname + "/index.html");
-});
+//   res.sendFile(__dirname + "/index.html");
+// });
 
 app.listen(3000, function () {
   console.log("Server Started on port 3000");

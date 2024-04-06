@@ -2,7 +2,9 @@
 
 <head>
     <title>ITD Cementation India Limited</title>
-    <link href="/public/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="public/css/style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -25,269 +27,207 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"> </script>
-    <script src="public/js/frontend_script.js">
-    </script>
-
-<h2>ITD Cementation India Limited</h2>
-<form id="yourFormId" action="/" method="POST" enctype="multipart/form-data">
- 
-<table align="center" cellpadding = "10">
-<h4>TRAVEL EXPENSE REPORT</h4>
-
-<!----- Name ---------------------------------------------------------->
-<tr>
-<td>NAME</td>
-<td><input type="text" name="Name" maxlength="30"/>
-(max 30 characters a-z and A-Z)
-</td>
-</tr>
- 
-<!----- CODE No. ---------------------------------------------------------->
-<tr>
-<td>CODE No.</td>
-<td><input type="text" name="empID" maxlength="12"/>
-(max 12 characters 0-9)
-</td>
-</tr>
-
-<!----- LOCATION ---------------------------------------------------------->
-<tr>
-<td>LOCATION</td>
-<td><input type="text" name="location" maxlength="30"/>
-(max 30 characters a-z and A-Z)
-</td>
-</tr>
-
-<!----- DESIGNATION ---------------------------------------------------------->
-<tr>
-<td>DESIGNATION</td>
-<td><input type="text" name="designation" maxlength="30"/>
-(max 30 characters a-z and A-Z)
-</td>
-</tr>
-
-<!----- DEPARTMENT ---------------------------------------------------------->
-<tr>
-<td>DEPARTMENT</td>
-<td><input type="text" name="department" maxlength="30"/>
-(max 30 characters a-z and A-Z)
-</td>
-</tr>
-
-<!----- PROJECT CODE ---------------------------------------------------------->
-<tr>
-<td>PROJECT CODE</td>
-<td><input type="text" name="Project_Code" maxlength="30"/>
-(max 30 characters 0-9 and A-Z)
-</td>
-</tr>
-
-<!----- Purpose of Visit ---------------------------------------------------------->
-<tr>
-<td>Purpose of Visit
-</td>
-<td><textarea name="Purpose_of_Visit" rows="4" cols="30"></textarea></td>
-</tr>
-
-<!----- TAF No. ---------------------------------------------------------->
-<tr>
-<td>TAF No.</td>
-<td><input type="text" name="TAF_No" maxlength="30"/>
-(max 30 characters 0-9 and A-Z)
-</td>
-</tr>
- 
-
-<!----- TABLE ---------------------------------------------------------->
-<tr>
-    <td>TRAVELL DETAILS
-     
-    </td>
-    <input type="hidden" id="totalRowsTravelling" name="totalRowsTravelling" value="1">
-
-    <td>
-    <table id="myTableTravelling">
-     
-    <tr>
-    <td align="center"><b>Sl.No.</b></td>
-    <td align="center"><b>Date</b></td>
-    <td align="center"><b>From</b></td>
-    <td align="center"><b>To</b></td>
-    <td align="center"><b>Mode</b></td>
-    <td align="center"><b>Class</b></td>
-    <td align="center"><b>Fare </br> Rs.</b></td>
-    <td align="center"><b>Convenience </br> Rs.</b></td>
-    <td align="center"><b>Food & </br> Loddging Rs.</b></td>
-    <td align="center"><b>Incendital </br> Rs.</b></td>
-    <td align="center"><b>TOTAL</b></td>
-    </tr>
-     
-    <tr>
-    <td>1</td>
-    <td><input type="text" name="Date1" maxlength="30" /></td>
-    <td><input type="text" name="From1" maxlength="30" /></td>
-    <td><input type="text" name="To1" maxlength="30" /></td>
-    <td><input type="text" name="Mode1" maxlength="30" /></td>
-    <td><input type="text" name="Class1" maxlength="30" /></td>
-    <td><input type="text" name="Fare1" maxlength="30" /></td>
-    <td><input type="text" name="Convenience1" maxlength="30" /></td>
-    <td><input type="text" name="Food_Lodging1" maxlength="30" /></td>
-    <td><input type="text" name="Incidental1" maxlength="30" /></td>
-    <td><input type="text" name="Total1" maxlength="30" /></td>
-    </tr>
-     
-    <tr>
-        <td></td>
-        <td>
-            <input type="button" onclick="myCreateFunctionTravelling()" value="Create row"></input>
-        </td>
-        <td>
-            <input type="button" onclick="myDeleteFunctionTravelling()" value="Delete row"></input>
-        </td>
-        
-    </tr>
-
-
-    </table>
-     
-    </td>
-    </tr>
-
-    <tr>
-        <td>CONVENIENCE
-         
-        </td>
-         
-        <td>
-        <table id="myTableConvenience">
-            <input type="hidden" id="totalRowsConvenience" name="totalRowsConvenience" value="1">
-
-        <tr>
-        <td align="center"><b>Sl.No.</b></td>
-        <td align="center"><b>Date</b></td>
-        <td align="center"><b>From </br></td>
-        <td align="center"><b>To</b></td>
-        <td align="center"><b>Mode</b></td>
-        <td align="center"><b>Purpose </br> Rs.</b></td>
-        <td align="center"><b>Amount </br> Rs.</b></td>
-        <td align="center"><b>Bill </br> Rs.</b></td>
-        </tr>
-         
-        <tr>
-        <td>1</td>
-        <td><input type="text" name="Convenience_Date1" maxlength="30" /></td>
-        <td><input type="text" name="Convenience_From1" maxlength="30" /></td>
-        <td><input type="text" name="Convenience_To1" maxlength="30" /></td>
-        <td><input type="text" name="Convenience_Mode1" maxlength="30" /></td>
-        <td><input type="text" name="Convenience_Purpose1" maxlength="30" /></td>
-        <td><input type="text" name="Convenience_Amount1" maxlength="30" /></td>
-        <td><input type="file" id="convenienceFileInput1" name="Convenience_Bill1" maxlength="30" /></td>
-        <input type="hidden" id="convenienceFileId1" name="Convenience_BillId1" />
-
-         
-        <tr>
-            <td></td>
-            <td>
-                <input type="button" onclick="myCreateFunctionConvenience()" value="Create row"></input>
-            </td>
-            <td>
-                <input type="button" onclick="myDeleteFunctionConvenience()" value="Delete row"></input>
-            </td>
-            
-        </tr>
-    
-    
-        </table>
-         
-        </td>
-        </tr>
-    
-        <tr>
-        <td>FOOD & LODDGING
-         
-        </td>
-         
-        <td>
-        <table id="myTableFoodAndLodging">
-            <input type="hidden" id="totalRowsFoodAndLodging" name="totalRowsFoodAndLodging" value="1">
-
+    <!-- <script src="public/js/script.js"></script> -->
+    <!-- <script src="public/js/frontend_script.js"></script> -->
+    <h2>ITD Cementation India Limited</h2>
+    <form id="yourFormId" enctype="multipart/form-data">
+        <table align="center" cellpadding="10">
+            <h4>TRAVEL EXPENSE REPORT</h4>
+            <!----- Name ---------------------------------------------------------->
             <tr>
-                <td align="center"><b>Sl.No.</b></td>
-                <td align="center"><b>Date</b></td>
-                <td align="center"><b>Bill No. </br></td>
-                <td align="center"><b>Hotel</b></td>
-                <td align="center"><b>Occupancy</b></td>
-                <td align="center"><b>Amount </br> Rs.</b></td>
-                <td align="center"><b>Bill </br> Rs.</b></td>
-                </tr>
-                 
-                <tr>
-                <td>1</td>
-                <td><input type="text" name="foodLodging_Date1" maxlength="30" /></td>
-                <td><input type="text" name="foodLodging_BillNo1" maxlength="30" /></td>
-                <td><input type="text" name="foodLodging_Hotel1" maxlength="30" /></td>
-                <td><input type="text" name="foodLodging_Occupancy1" maxlength="30" /></td>
-                <td><input type="text" name="foodLodging_Amount1" maxlength="30" /></td>
-                <td><input type="file" id="foodLodgingFileInput1" name="foodLodging_Bill1" maxlength="30" /></td>
-                <input type="hidden" id="foodLodgingFileId1" name="foodLodging_BillId1" />
-
-        <tr>
-            <td></td>
-            <td>
-                <input type="button" onclick="myCreateFunctionFoodAndLodging()" value="Create row"></input>
-            </td>
-            <td>
-                <input type="button" onclick="myDeleteFunctionFoodAndLodging()" value="Delete row"></input>
-            </td>
-            
-        </tr>
-
-        </table>
-         
-        </td>
-        </tr>
-
-        <tr>
-            <td>INCIDENTALS
-             
-            </td>
-             
-            <td>
-            <table id="myTableIncidental">
-                <input type="hidden" id="totalRowsIncidental" name="totalRowsIncidental" value="1">
-
-                <tr>
-                    <td align="center"><b>Sl.No.</b></td>
-                    <td align="center"><b>Date</b></td>
-                    <td align="center"><b>Expense </br></td>
-                    <td align="center"><b>Remarks</b></td>
-                    <td align="center"><b>Amount </br> Rs.</b></td>
-                    <td align="center"><b>Bill </br> Rs.</b></td>
-                </tr>
-                     
-                <tr>
-                    <td>1</td>
-                    <td><input type="text" name="incidentals_Date1" maxlength="30" /></td>
-                    <td><input type="text" name="incidentals_Expense1" maxlength="30" /></td>
-                    <td><input type="text" name="incidentals_Remarks1" maxlength="30" /></td>
-                    <td><input type="text" name="incidentals_Amount1" maxlength="30" /></td>
-                    <td><input type="file" id="incidentalsFileInput1"  name="incidentals_Bill1" maxlength="30" /></td>
-                    <input type="hidden" id="incidentalsFileId1" name="incidentals_BillId1" />
-
-            <tr>
-                <td></td>
-                <td>
-                    <input type="button" onclick="myCreateFunctionIncidental()" value="Create row"></input>
-                </td>
-                <td>
-                    <input type="button" onclick="myDeleteFunctionIncidental()" value="Delete row"></input>
-                </td>
-                
+                <td>NAME</td>
+                <td><input type="text" name="Name" maxlength="30" /> (max 30 characters a-z and A-Z) </td>
             </tr>
-    
-            </table>
-             
-            </td>
+            <!----- CODE No. ---------------------------------------------------------->
+            <tr>
+                <td>CODE No.</td>
+                <td><input type="text" name="empID" maxlength="12" /> (max 12 characters 0-9) </td>
+            </tr>
+            <!----- LOCATION ---------------------------------------------------------->
+            <tr>
+                <td>LOCATION</td>
+                <td><input type="text" name="location" maxlength="30" /> (max 30 characters a-z and A-Z) </td>
+            </tr>
+            <!----- DESIGNATION ---------------------------------------------------------->
+            <tr>
+                <td>DESIGNATION</td>
+                <td><input type="text" name="designation" maxlength="30" /> (max 30 characters a-z and A-Z) </td>
+            </tr>
+            <!----- DEPARTMENT ---------------------------------------------------------->
+            <tr>
+                <td>DEPARTMENT</td>
+                <td><input type="text" name="department" maxlength="30" /> (max 30 characters a-z and A-Z) </td>
+            </tr>
+            <!----- PROJECT CODE ---------------------------------------------------------->
+            <tr>
+                <td>PROJECT CODE</td>
+                <td><input type="text" name="Project_Code" maxlength="30" /> (max 30 characters 0-9 and A-Z) </td>
+            </tr>
+            <!----- Purpose of Visit ---------------------------------------------------------->
+            <tr>
+                <td>Purpose of Visit </td>
+                <td><textarea name="Purpose_of_Visit" rows="4" cols="30"></textarea></td>
+            </tr>
+            <!----- TAF No. ---------------------------------------------------------->
+            <tr>
+                <td>TAF No.</td>
+                <td><input type="text" name="TAF_No" maxlength="30" /> (max 30 characters 0-9 and A-Z) </td>
+            </tr>
+            <!----- TABLE ---------------------------------------------------------->
+            <tr>
+                <td>TRAVELL DETAILS </td>
+                <input type="hidden" id="totalRowsTravelling" name="totalRowsTravelling" value="1">
+                <td>
+                    <table id="myTableTravelling">
+                        <tr>
+                            <td align="center"><b>Sl.No.</b></td>
+                            <td align="center"><b>Date</b></td>
+                            <td align="center"><b>From</b></td>
+                            <td align="center"><b>To</b></td>
+                            <td align="center"><b>Mode</b></td>
+                            <td align="center"><b>Class</b></td>
+                            <td align="center"><b>Fare </br> Rs.</b></td>
+                            <td align="center"><b>Convenience </br> Rs.</b></td>
+                            <td align="center"><b>Food & </br> Loddging Rs.</b></td>
+                            <td align="center"><b>Incendital </br> Rs.</b></td>
+                            <td align="center"><b>TOTAL</b></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="Date1" maxlength="30" /></td>
+                            <td><input type="text" name="From1" maxlength="30" /></td>
+                            <td><input type="text" name="To1" maxlength="30" /></td>
+                            <td><input type="text" name="Mode1" maxlength="30" /></td>
+                            <td><input type="text" name="Class1" maxlength="30" /></td>
+                            <td><input type="text" name="Fare1" maxlength="30" /></td>
+                            <td><input type="text" name="Convenience1" maxlength="30" /></td>
+                            <td><input type="text" name="Food_Lodging1" maxlength="30" /></td>
+                            <td><input type="text" name="Incidental1" maxlength="30" /></td>
+                            <td><input type="text" name="Total1" maxlength="30" /></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="myCreateFunctionTravelling()" value="Create row"></input>
+                            </td>
+                            <td>
+                                <input type="button" onclick="myDeleteFunctionTravelling()" value="Delete row"></input>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>CONVENIENCE </td>
+                <td>
+                    <table id="myTableConvenience">
+                        <input type="hidden" id="totalRowsConvenience" name="totalRowsConvenience" value="1">
+                        <tr>
+                            <td align="center"><b>Sl.No.</b></td>
+                            <td align="center"><b>Date</b></td>
+                            <td align="center"><b>From </br></td>
+                            <td align="center"><b>To</b></td>
+                            <td align="center"><b>Mode</b></td>
+                            <td align="center"><b>Purpose </br> Rs.</b></td>
+                            <td align="center"><b>Amount </br> Rs.</b></td>
+                            <td align="center"><b>Bill </br> Rs.</b></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="Convenience_Date1" maxlength="30" /></td>
+                            <td><input type="text" name="Convenience_From1" maxlength="30" /></td>
+                            <td><input type="text" name="Convenience_To1" maxlength="30" /></td>
+                            <td><input type="text" name="Convenience_Mode1" maxlength="30" /></td>
+                            <td><input type="text" name="Convenience_Purpose1" maxlength="30" /></td>
+                            <td><input type="text" name="Convenience_Amount1" maxlength="30" /></td>
+                            <td><input type="file" id="convenienceFileInput1" name="Convenience_Bill1" maxlength="30" />
+                            </td>
+                            <input type="hidden" id="convenienceFileId1" name="Convenience_BillId1" />
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button type="button" id="CreateConvenience"
+                                    onclick="myCreateFunctionConvenience()">Create row</button>
+                            </td>
+                            <td>
+                                <button type="button" id="DeleteConvenience"
+                                    onclick="myDeleteFunctionConvenience()">Delete row</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>FOOD & LODDGING </td>
+                <td>
+                    <table id="myTableFoodAndLodging">
+                        <input type="hidden" id="totalRowsFoodAndLodging" name="totalRowsFoodAndLodging" value="1">
+                        <tr>
+                            <td align="center"><b>Sl.No.</b></td>
+                            <td align="center"><b>Date</b></td>
+                            <td align="center"><b>Bill No. </br></td>
+                            <td align="center"><b>Hotel</b></td>
+                            <td align="center"><b>Occupancy</b></td>
+                            <td align="center"><b>Amount </br> Rs.</b></td>
+                            <td align="center"><b>Bill </br> Rs.</b></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="foodLodging_Date1" maxlength="30" /></td>
+                            <td><input type="text" name="foodLodging_BillNo1" maxlength="30" /></td>
+                            <td><input type="text" name="foodLodging_Hotel1" maxlength="30" /></td>
+                            <td><input type="text" name="foodLodging_Occupancy1" maxlength="30" /></td>
+                            <td><input type="text" name="foodLodging_Amount1" maxlength="30" /></td>
+                            <td><input type="file" id="foodLodgingFileInput1" name="foodLodging_Bill1" maxlength="30" />
+                            </td>
+                            <input type="hidden" id="foodLodgingFileId1" name="foodLodging_BillId1" />
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="myCreateFunctionFoodAndLodging()"
+                                    value="Create row"></input>
+                            </td>
+                            <td>
+                                <input type="button" onclick="myDeleteFunctionFoodAndLodging()"
+                                    value="Delete row"></input>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>INCIDENTALS </td>
+                <td>
+                    <table id="myTableIncidental">
+                        <input type="hidden" id="totalRowsIncidental" name="totalRowsIncidental" value="1">
+                        <tr>
+                            <td align="center"><b>Sl.No.</b></td>
+                            <td align="center"><b>Date</b></td>
+                            <td align="center"><b>Expense </br></td>
+                            <td align="center"><b>Remarks</b></td>
+                            <td align="center"><b>Amount </br> Rs.</b></td>
+                            <td align="center"><b>Bill </br> Rs.</b></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="text" name="incidentals_Date1" maxlength="30" /></td>
+                            <td><input type="text" name="incidentals_Expense1" maxlength="30" /></td>
+                            <td><input type="text" name="incidentals_Remarks1" maxlength="30" /></td>
+                            <td><input type="text" name="incidentals_Amount1" maxlength="30" /></td>
+                            <td><input type="file" id="incidentalsFileInput1" name="incidentals_Bill1" maxlength="30" />
+                            </td>
+                            <input type="hidden" id="incidentalsFileId1" name="incidentals_BillId1" />
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" onclick="myCreateFunctionIncidental()" value="Create row"></input>
+                            </td>
+                            <td>
+                                <input type="button" onclick="myDeleteFunctionIncidental()" value="Delete row"></input>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
             </tr>
             <!----- Claimant  -------------------------------------------------------->
             <tr>
@@ -316,12 +256,15 @@
             <!----- Submit and Reset ------------------------------------------------->
             <tr>
                 <td colspan="2" align="center">
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
+                    <!-- <input type="submit" value="Submit">
+                    <input type="reset" value="Reset"> -->
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
                 </td>
             </tr>
         </table>
     </form>
+    <script src="public/js/script.js"></script>
 </body>
 
 </html>
