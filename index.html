@@ -30,6 +30,10 @@
     <!-- <script src="public/js/script.js"></script> -->
     <!-- <script src="public/js/frontend_script.js"></script> -->
     <h2>ITD Cementation India Limited</h2>
+    <div id="loadingIndicator" style="display: none;">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
     <form id="yourFormId" enctype="multipart/form-data">
         <table align="center" cellpadding="10">
             <h4>TRAVEL EXPENSE REPORT</h4>
@@ -94,18 +98,18 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><input type="text" name="Date1" maxlength="30" /></td>
+                            <td><input type="date" name="Date1" maxlength="30" /></td>
                             <td><input type="text" name="From1" maxlength="30" /></td>
                             <td><input type="text" name="To1" maxlength="30" /></td>
                             <td><input type="text" name="Mode1" maxlength="30" /></td>
                             <td><input type="text" name="Class1" maxlength="30" /></td>
-                            <td><input type="text" name="Fare1" maxlength="30" /></td>
-                            <td><input type="text" name="Convenience1" maxlength="30" /></td>
-                            <td><input type="text" name="Food_Lodging1" maxlength="30" /></td>
-                            <td><input type="text" name="Incidental1" maxlength="30" /></td>
-                            <td><input type="text" name="Total1" maxlength="30" /></td>
+                            <td><input type="number" name="Fare1" maxlength="30" /></td>
+                            <td><input type="number" name="Convenience1" maxlength="30" /></td>
+                            <td><input type="number" name="Food_Lodging1" maxlength="30" /></td>
+                            <td><input type="number" name="Incidental1" maxlength="30" /></td>
+                            <td><input type="number" name="Total1" maxlength="30" /></td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td></td>
                             <td>
                                 <input type="button" onclick="myCreateFunctionTravelling()" value="Create row"></input>
@@ -113,7 +117,7 @@
                             <td>
                                 <input type="button" onclick="myDeleteFunctionTravelling()" value="Delete row"></input>
                             </td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </td>
             </tr>
@@ -134,24 +138,22 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><input type="text" name="Convenience_Date1" maxlength="30" /></td>
+                            <td><input type="date" name="Convenience_Date1" maxlength="30" /></td>
                             <td><input type="text" name="Convenience_From1" maxlength="30" /></td>
                             <td><input type="text" name="Convenience_To1" maxlength="30" /></td>
                             <td><input type="text" name="Convenience_Mode1" maxlength="30" /></td>
                             <td><input type="text" name="Convenience_Purpose1" maxlength="30" /></td>
-                            <td><input type="text" name="Convenience_Amount1" maxlength="30" /></td>
+                            <td><input type="number" name="Convenience_Amount1" maxlength="30" /></td>
                             <td><input type="file" id="convenienceFileInput1" name="Convenience_Bill1" maxlength="30" />
                             </td>
-                            <input type="hidden" id="convenienceFileId1" name="Convenience_BillId1" />
+                            <!-- <input type="hidden" id="convenienceFileId1" name="Convenience_BillId1" /> -->
                         <tr>
                             <td></td>
                             <td>
-                                <button type="button" id="CreateConvenience"
-                                    onclick="myCreateFunctionConvenience()">Create row</button>
+                                <button type="button" onclick="myCreateFunctionConvenience()">Create row</button>
                             </td>
                             <td>
-                                <button type="button" id="DeleteConvenience"
-                                    onclick="myDeleteFunctionConvenience()">Delete row</button>
+                                <button type="button" onclick="myDeleteFunctionConvenience()">Delete row</button>
                             </td>
                         </tr>
                     </table>
@@ -173,23 +175,21 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><input type="text" name="foodLodging_Date1" maxlength="30" /></td>
+                            <td><input type="date" name="foodLodging_Date1" maxlength="30" /></td>
                             <td><input type="text" name="foodLodging_BillNo1" maxlength="30" /></td>
                             <td><input type="text" name="foodLodging_Hotel1" maxlength="30" /></td>
                             <td><input type="text" name="foodLodging_Occupancy1" maxlength="30" /></td>
-                            <td><input type="text" name="foodLodging_Amount1" maxlength="30" /></td>
+                            <td><input type="number" name="foodLodging_Amount1" maxlength="30" /></td>
                             <td><input type="file" id="foodLodgingFileInput1" name="foodLodging_Bill1" maxlength="30" />
                             </td>
                             <input type="hidden" id="foodLodgingFileId1" name="foodLodging_BillId1" />
                         <tr>
                             <td></td>
                             <td>
-                                <input type="button" onclick="myCreateFunctionFoodAndLodging()"
-                                    value="Create row"></input>
+                                <button type="button" onclick="myCreateFunctionFoodAndLodging()">Create row</button>
                             </td>
                             <td>
-                                <input type="button" onclick="myDeleteFunctionFoodAndLodging()"
-                                    value="Delete row"></input>
+                                <button type="button" onclick="myDeleteFunctionFoodAndLodging()">Delete row</button>
                             </td>
                         </tr>
                     </table>
@@ -210,20 +210,20 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><input type="text" name="incidentals_Date1" maxlength="30" /></td>
+                            <td><input type="date" name="incidentals_Date1" maxlength="30" /></td>
                             <td><input type="text" name="incidentals_Expense1" maxlength="30" /></td>
                             <td><input type="text" name="incidentals_Remarks1" maxlength="30" /></td>
-                            <td><input type="text" name="incidentals_Amount1" maxlength="30" /></td>
+                            <td><input type="number" name="incidentals_Amount1" maxlength="30" /></td>
                             <td><input type="file" id="incidentalsFileInput1" name="incidentals_Bill1" maxlength="30" />
                             </td>
                             <input type="hidden" id="incidentalsFileId1" name="incidentals_BillId1" />
                         <tr>
                             <td></td>
                             <td>
-                                <input type="button" onclick="myCreateFunctionIncidental()" value="Create row"></input>
+                                <button type="button" onclick="myCreateFunctionIncidental()">Create row</button>
                             </td>
                             <td>
-                                <input type="button" onclick="myDeleteFunctionIncidental()" value="Delete row"></input>
+                                <button type="button" onclick="myDeleteFunctionIncidental()">Delete row</button>
                             </td>
                         </tr>
                     </table>
@@ -258,13 +258,15 @@
                 <td colspan="2" align="center">
                     <!-- <input type="submit" value="Submit">
                     <input type="reset" value="Reset"> -->
-                    <button type="submit">Submit</button>
+                    <button id="submitButton" type="submit">Submit</button>
                     <button type="reset">Reset</button>
                 </td>
             </tr>
         </table>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/appwrite"></script>
     <script src="public/js/script.js"></script>
+    <script src="public/js/one.js"></script>
 </body>
 
 </html>
